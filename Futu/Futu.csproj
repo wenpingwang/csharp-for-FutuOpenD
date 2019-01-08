@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27D760C2-CAC9-4FFB-A357-D3574A3783E3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Futu</RootNamespace>
+    <AssemblyName>Futu</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.ProtocolBuffers, Version=2.4.1.555, Culture=neutral, PublicKeyToken=55f7125234beb589, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.ProtocolBuffers.2.4.1.555\lib\net40\Google.ProtocolBuffers.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffers.Serialization, Version=2.4.1.555, Culture=neutral, PublicKeyToken=55f7125234beb589, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.ProtocolBuffers.2.4.1.555\lib\net40\Google.ProtocolBuffers.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client.cs" />
+    <Compile Include="DefaultSession.java.cs" />
+    <Compile Include="FutuOpenD.cs" />
+    <Compile Include="GetGlobalStateExec.cs" />
+    <Compile Include="IExecutor.cs" />
+    <Compile Include="InitConnectExec.cs" />
+    <Compile Include="IUpdateCallBack.cs" />
+    <Compile Include="IUpdateExecutor.cs" />
+    <Compile Include="KeepAliveExec.cs" />
+    <Compile Include="pb2\Common.cs" />
+    <Compile Include="pb2\GetGlobalState.cs" />
+    <Compile Include="pb2\InitConnect.cs" />
+    <Compile Include="pb2\KeepAlive.cs" />
+    <Compile Include="pb2\Notify.cs" />
+    <Compile Include="pb2\QotCommon.cs" />
+    <Compile Include="pb2\QotGetBasicQot.cs" />
+    <Compile Include="pb2\QotGetBroker.cs" />
+    <Compile Include="pb2\QotGetHistoryKL.cs" />
+    <Compile Include="pb2\QotGetHistoryKLPoints.cs" />
+    <Compile Include="pb2\QotGetHoldingChangeList.cs" />
+    <Compile Include="pb2\QotGetKL.cs" />
+    <Compile Include="pb2\QotGetOptionChain.cs" />
+    <Compile Include="pb2\QotGetOrderBook.cs" />
+    <Compile Include="pb2\QotGetOrderDetail.cs" />
+    <Compile Include="pb2\QotGetOwnerPlate.cs" />
+    <Compile Include="pb2\QotGetPlateSecurity.cs" />
+    <Compile Include="pb2\QotGetPlateSet.cs" />
+    <Compile Include="pb2\QotGetReference.cs" />
+    <Compile Include="pb2\QotGetRehab.cs" />
+    <Compile Include="pb2\QotGetRT.cs" />
+    <Compile Include="pb2\QotGetSecuritySnapshot.cs" />
+    <Compile Include="pb2\QotGetStaticInfo.cs" />
+    <Compile Include="pb2\QotGetSubInfo.cs" />
+    <Compile Include="pb2\QotGetSuspend.cs" />
+    <Compile Include="pb2\QotGetTicker.cs" />
+    <Compile Include="pb2\QotGetTradeDate.cs" />
+    <Compile Include="pb2\QotRegQotPush.cs" />
+    <Compile Include="pb2\QotRequestHistoryKL.cs" />
+    <Compile Include="pb2\QotSub.cs" />
+    <Compile Include="pb2\QotUpdateBasicQot.cs" />
+    <Compile Include="pb2\QotUpdateBroker.cs" />
+    <Compile Include="pb2\QotUpdateKL.cs" />
+    <Compile Include="pb2\QotUpdateOrderBook.cs" />
+    <Compile Include="pb2\QotUpdateOrderDetail.cs" />
+    <Compile Include="pb2\QotUpdateRT.cs" />
+    <Compile Include="pb2\QotUpdateTicker.cs" />
+    <Compile Include="pb2\TrdCommon.cs" />
+    <Compile Include="pb2\TrdGetAccList.cs" />
+    <Compile Include="pb2\TrdGetFunds.cs" />
+    <Compile Include="pb2\TrdGetHistoryOrderFillList.cs" />
+    <Compile Include="pb2\TrdGetHistoryOrderList.cs" />
+    <Compile Include="pb2\TrdGetMaxTrdQtys.cs" />
+    <Compile Include="pb2\TrdGetOrderFillList.cs" />
+    <Compile Include="pb2\TrdGetOrderList.cs" />
+    <Compile Include="pb2\TrdGetPositionList.cs" />
+    <Compile Include="pb2\TrdModifyOrder.cs" />
+    <Compile Include="pb2\TrdNotify.cs" />
+    <Compile Include="pb2\TrdPlaceOrder.cs" />
+    <Compile Include="pb2\TrdReconfirmOrder.cs" />
+    <Compile Include="pb2\TrdSubAccPush.cs" />
+    <Compile Include="pb2\TrdUnlockTrade.cs" />
+    <Compile Include="pb2\TrdUpdateOrder.cs" />
+    <Compile Include="pb2\TrdUpdateOrderFill.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtoBufPackage.cs" />
+    <Compile Include="qot\QotGetBasicQotExec.cs" />
+    <Compile Include="qot\QotGetSecuritySnapshotExec.cs" />
+    <Compile Include="qot\QotGetStaticInfoExec.cs" />
+    <Compile Include="qot\QotGetSubInfoExec.cs" />
+    <Compile Include="qot\QotGetTickerExec.cs" />
+    <Compile Include="qot\QotRegQotPushExec.cs" />
+    <Compile Include="qot\QotSubExec.cs" />
+    <Compile Include="Session.cs" />
+    <Compile Include="trd\TraderSession.cs" />
+    <Compile Include="trd\TrdGetAccListExec.cs" />
+    <Compile Include="trd\TrdGetFundsExec.cs" />
+    <Compile Include="trd\TrdGetOrderFillListExec.cs" />
+    <Compile Include="trd\TrdPlaceOrderExec.cs" />
+    <Compile Include="trd\TrdSubAccPushExec.cs" />
+    <Compile Include="trd\TrdUnlockTradeExec.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="pb2\pb2\Common.proto" />
+    <None Include="pb2\pb2\GetGlobalState.proto" />
+    <None Include="pb2\pb2\InitConnect.proto" />
+    <None Include="pb2\pb2\KeepAlive.proto" />
+    <None Include="pb2\pb2\Notify.proto" />
+    <None Include="pb2\pb2\Qot_Common.proto" />
+    <None Include="pb2\pb2\Qot_GetBasicQot.proto" />
+    <None Include="pb2\pb2\Qot_GetBroker.proto" />
+    <None Include="pb2\pb2\Qot_GetHistoryKL.proto" />
+    <None Include="pb2\pb2\Qot_GetHistoryKLPoints.proto" />
+    <None Include="pb2\pb2\Qot_GetHoldingChangeList.proto" />
+    <None Include="pb2\pb2\Qot_GetKL.proto" />
+    <None Include="pb2\pb2\Qot_GetOptionChain.proto" />
+    <None Include="pb2\pb2\Qot_GetOrderBook.proto" />
+    <None Include="pb2\pb2\Qot_GetOrderDetail.proto" />
+    <None Include="pb2\pb2\Qot_GetOwnerPlate.proto" />
+    <None Include="pb2\pb2\Qot_GetPlateSecurity.proto" />
+    <None Include="pb2\pb2\Qot_GetPlateSet.proto" />
+    <None Include="pb2\pb2\Qot_GetReference.proto" />
+    <None Include="pb2\pb2\Qot_GetRehab.proto" />
+    <None Include="pb2\pb2\Qot_GetRT.proto" />
+    <None Include="pb2\pb2\Qot_GetSecuritySnapshot.proto" />
+    <None Include="pb2\pb2\Qot_GetStaticInfo.proto" />
+    <None Include="pb2\pb2\Qot_GetSubInfo.proto" />
+    <None Include="pb2\pb2\Qot_GetSuspend.proto" />
+    <None Include="pb2\pb2\Qot_GetTicker.proto" />
+    <None Include="pb2\pb2\Qot_GetTradeDate.proto" />
+    <None Include="pb2\pb2\Qot_RegQotPush.proto" />
+    <None Include="pb2\pb2\Qot_RequestHistoryKL.proto" />
+    <None Include="pb2\pb2\Qot_Sub.proto" />
+    <None Include="pb2\pb2\Qot_UpdateBasicQot.proto" />
+    <None Include="pb2\pb2\Qot_UpdateBroker.proto" />
+    <None Include="pb2\pb2\Qot_UpdateKL.proto" />
+    <None Include="pb2\pb2\Qot_UpdateOrderBook.proto" />
+    <None Include="pb2\pb2\Qot_UpdateOrderDetail.proto" />
+    <None Include="pb2\pb2\Qot_UpdateRT.proto" />
+    <None Include="pb2\pb2\Qot_UpdateTicker.proto" />
+    <None Include="pb2\pb2\Trd_Common.proto" />
+    <None Include="pb2\pb2\Trd_GetAccList.proto" />
+    <None Include="pb2\pb2\Trd_GetFunds.proto" />
+    <None Include="pb2\pb2\Trd_GetHistoryOrderFillList.proto" />
+    <None Include="pb2\pb2\Trd_GetHistoryOrderList.proto" />
+    <None Include="pb2\pb2\Trd_GetMaxTrdQtys.proto" />
+    <None Include="pb2\pb2\Trd_GetOrderFillList.proto" />
+    <None Include="pb2\pb2\Trd_GetOrderList.proto" />
+    <None Include="pb2\pb2\Trd_GetPositionList.proto" />
+    <None Include="pb2\pb2\Trd_ModifyOrder.proto" />
+    <None Include="pb2\pb2\Trd_Notify.proto" />
+    <None Include="pb2\pb2\Trd_PlaceOrder.proto" />
+    <None Include="pb2\pb2\Trd_ReconfirmOrder.proto" />
+    <None Include="pb2\pb2\Trd_SubAccPush.proto" />
+    <None Include="pb2\pb2\Trd_UnlockTrade.proto" />
+    <None Include="pb2\pb2\Trd_UpdateOrder.proto" />
+    <None Include="pb2\pb2\Trd_UpdateOrderFill.proto" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
